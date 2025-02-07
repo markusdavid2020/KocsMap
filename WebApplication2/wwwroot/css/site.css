@@ -18,15 +18,21 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url('../images/kep.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
 }
 
 <style >
 #map {
     height: 500px; /* Térkép magassága */
     width: 100%; /* Térkép szélessége */
-    background-image: url('images/kep.jpg');
+    /*background-image: url('images/kep.jpg');*/
     background-size: cover;
+
 }
 
 </style >
