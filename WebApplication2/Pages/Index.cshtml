@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Budapest kocsma kereső</h2>
+
+<!-- A térkép megjelenítésére szolgáló div -->
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<script>
+    function initMap() {
+        // Budapest koordinátái
+        var location = { lat: 47.497913, lng: 19.040236 };
+
+        // Térkép inicializálása
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: location
+        });
+
+        // Marker elhelyezése
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script>
+
+<!-- Google Maps API betöltése az API kulcsoddal -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfISgMba-SoFsP-6HsGblwEWMLBI-Hdw0&callback=initMap">
+</script>
